@@ -1,0 +1,5 @@
+**/build/
+**/sdkconfig
+**/sdkconfig.ci
+**/sdkconfig.old
+**/motion_driver_6.12/
