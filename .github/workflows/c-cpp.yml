@@ -20,6 +20,6 @@ jobs:
     - name: Patch motion_driver_6.12
       uses: srt32/git-actions@v0.0.3
       with:
-        args: git apply patch.diff
+        args: git apply ./components/mpu/patch.diff
     - name: esp-idf build
       uses: sebastianPsm/esp-idf-ci-action@1
