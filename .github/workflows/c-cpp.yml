@@ -18,8 +18,8 @@ jobs:
       with:
         args: unzip -P ${{ secrets.ZIP_PASSWORD }} -qq ./components/mpu/motion_driver_6.12.zip -d ./components/mpu/
     - name: Patch motion_driver_6.12
-      uses: jcblw/bash@master
+      uses: srt32/git-actions@v0.0.3
       with:
-        args: patch -p0 patch.diff
+        args: git apply -p1 --reject --whitespace=fix components/mpu/patch.diff
     - name: esp-idf build
       uses: sebastianPsm/esp-idf-ci-action@1
