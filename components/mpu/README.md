@@ -11,6 +11,7 @@ and extract the content here. The directory should look like the following:
     - \motion_driver_6.12         <- add content if the TDK [motion_driver_6.12.zip](https://invensense.tdk.com/developers/download/emd-6-12/?wpdmdl=45) here
     - CMakeLists.txt
     - Kconfig
+    - motion_driver_6.12.zip      <- Please ignore this archive and download from the link above. This file is only used for continous integration with GitHub
     - patch.diff
     - README.txt
 - \main
