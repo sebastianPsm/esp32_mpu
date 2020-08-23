@@ -13,12 +13,9 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: curl
-      uses: wei/curl@master
+    - name: Decompress
+      uses: TonyBogdanov/zip@1.0
       with:
-        args: ${{ secrets.CURL_MOTION_DRIVER }}
-    - name: unzip
-      uses: DuckSoft/extract-7z-action@v1.0
-      with:
-        pathSource: motion_driver_6.12.zip
-        pathTarget: .
+        args: unzip -P ${{ secrets.ZIP_PASSWORD }} -qq ./components/mpu/motion_driver_6.12.zip -d ./components/mpu/
+    - name: esp-idf build
+      uses: sebastianPsm/esp-idf-ci-action@1
