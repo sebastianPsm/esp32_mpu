@@ -19,6 +19,6 @@ jobs:
         args: ${{ secrets.CURL_MOTION_DRIVER }}
     - name: unzip
       uses: DuckSoft/extract-7z-action@v1.0
-       with:
+      with:
         pathSource: motion_driver_6.12.zip
         pathTarget: .
