@@ -5,4 +5,6 @@ ESP32 hardware abstraction layer (hal) and example (main/main.c) for TKD InvenSe
 
 [Application video](https://github.com/sebastianPsm/esp32_mpu/raw/master/video/demo.mp4)
 
+## Sketch
 
+![Sketch](https://github.com/sebastianPsm/esp32_mpu/raw/master/img/sketch.png)
