@@ -22,7 +22,7 @@ void mpu_interrupt_cb(void * data) {
 
     dmp_read_fifo(gyro, accel_short, quat, &sensor_timestamp, &sensors, &more);
     if (sensors & INV_XYZ_ACCEL) {
-        //printf("accel: %ld, %ld, %ld\n", accel[0], accel[1], accel[2]);
+        //printf("accel: %d, %d, %d\n", accel_short[0], accel_short[1], accel_short[2]);
     }
 }
 
@@ -94,7 +94,6 @@ void app_main(void) {
     }
 
     mpu_set_sensors(INV_XYZ_GYRO | INV_XYZ_ACCEL | INV_XYZ_COMPASS);
-    //mpu_configure_fifo(INV_XYZ_GYRO | INV_XYZ_ACCEL);
     mpu_set_sample_rate(50);
 
     dmp_load_motion_driver_firmware();
