@@ -14,8 +14,7 @@ There are several MPU libraries for microcontroller (like the ESP32) avaiable (l
 
 1. Copy the components/mpu directory into your project directory.
 2. Download the motion driver [eMD 6.12](https://invensense.tdk.com/developers/software-downloads) and extract the content into components/mpu
-3. Apply components/mpu/patch.diff (e.g. with: `git apply -p1 --reject --whitespace=fix components/mpu/patch.diff`)
-  - I discovered, that this step will not always work straightforward. However, the patch file isn't that big and you can apply the changes manually.
+3. Apply components/mpu/patch.diff (e.g. with: `git apply -p1 --reject --whitespace=fix components/mpu/patch.diff`). I discovered, that this step will not always work straightforward. However, the patch file isn't that big and you can apply the changes manually.
 4. Select the right MPU chip (idf.py mencuconfig --> Component config --> motion_driver --> MPU chip model)
 
 See the following Sketch as wiring example
