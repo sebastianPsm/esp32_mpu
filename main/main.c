@@ -88,7 +88,7 @@ void app_main(void) {
     struct int_param_s int_param;
     int_param.interrupt_pin = (unsigned int) GPIO_NUM_13;
     int_param.cb = mpu_interrupt_cb;
-    result = mpu_init(&int_param);
+    result = mpu_init(&int_param); // bad idea to use a stack variable here!
     if (result) {
         MPL_LOGE("error: %d, l:%d\n", result, __LINE__);
     }
